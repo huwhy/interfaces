@@ -11,6 +11,9 @@ public class Json<T> implements Serializable {
     public static <T> Json<T> ERROR() {
         return new Json<>(500L);
     }
+    public static <T> Json<T> REDIRECT() {
+        return new Json<>(302L);
+    }
 
     /**
      * 编码
@@ -20,6 +23,10 @@ public class Json<T> implements Serializable {
      * 消息
      */
     private String message;
+    /**
+     * 重定向URL
+     */
+    private String url;
     /**
      * 数据
      */
@@ -53,6 +60,14 @@ public class Json<T> implements Serializable {
     public Json setMessage(String message) {
         this.message = message;
         return this;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public T getData() {
