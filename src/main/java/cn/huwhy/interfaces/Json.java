@@ -11,6 +11,7 @@ public class Json<T> implements Serializable {
     public static <T> Json<T> ERROR() {
         return new Json<>(500L);
     }
+
     public static <T> Json<T> REDIRECT() {
         return new Json<>(302L);
     }
@@ -83,4 +84,7 @@ public class Json<T> implements Serializable {
         return 200L == this.code;
     }
 
+    public boolean isRedirect() {
+        return 302L == this.code;
+    }
 }
