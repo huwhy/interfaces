@@ -4,7 +4,7 @@
 
   <groupId>cn.huwhy</groupId>
   <artifactId>interfaces</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <packaging>jar</packaging>
   <description>公用对象或接口</description>
 
